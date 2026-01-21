@@ -1,0 +1,15 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test_api_calculator
+  namespace: vcsproject-4
+  version: '1.0'
+  tags: []
+  type: SOAP
+spec:
+  api-spec:
+    $path: ./calculator100MultipleServicesMultiply.wsdl
+  rest-def:
+    $path: ./test_api_calculator-spec.yaml
+  policy-sequence:
+    - $ref: vcsproject-4:assembly-test_api_calculator:1.0
