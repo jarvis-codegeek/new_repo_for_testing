@@ -1,0 +1,15 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: calc-wsdl
+  namespace: vcsproject15
+  version: '1.0'
+  tags: []
+  type: SOAP
+spec:
+  api-spec:
+    $path: ./calculator100MultipleServicesMultiply.wsdl
+  rest-def:
+    $path: ./calc-wsdl-spec.yaml
+  policy-sequence:
+    - $ref: vcsproject15:assembly-calc-wsdl:1.0

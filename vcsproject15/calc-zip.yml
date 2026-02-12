@@ -1,0 +1,15 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: calc-zip
+  namespace: vcsproject15
+  version: '1.0'
+  tags: []
+  type: SOAP
+spec:
+  api-spec:
+    $path: ./calculator.zip
+  rest-def:
+    $path: ./calc-zip-spec.yaml
+  policy-sequence:
+    - $ref: vcsproject15:assembly-calc-zip:1.0

@@ -1,0 +1,15 @@
+kind: API
+apiVersion: api.ibm.com/v1
+metadata:
+  name: globalweather456
+  namespace: vcsproject15
+  version: '1.0'
+  tags: []
+  type: SOAP
+spec:
+  api-spec:
+    $path: ./exampleupdate.wsdl
+  rest-def:
+    $path: ./globalweather456-spec.yaml
+  policy-sequence:
+    - $ref: vcsproject15:assembly-globalweather456:1.0
